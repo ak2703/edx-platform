@@ -40,6 +40,7 @@ class CourseTeamSerializer(serializers.ModelSerializer):
         model = CourseTeam
         fields = (
             "id",
+            "discussion_id",
             "name",
             "is_active",
             "course_id",
@@ -50,7 +51,7 @@ class CourseTeamSerializer(serializers.ModelSerializer):
             "language",
             "membership",
         )
-        read_only_fields = ("course_id", "date_created")
+        read_only_fields = ("course_id", "date_created", "discussion_id")
 
 
 class CourseTeamCreationSerializer(serializers.ModelSerializer):
